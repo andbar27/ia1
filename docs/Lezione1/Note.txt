@@ -1,0 +1,26 @@
+Data: Giovedì 03/04/2025
+Argomenti: introduzione generale, pandas, dataframes
+
+Come eseguire:
+sudo docker exec -it -w /home/codice its_dev python3 Esempi.py
+
+home è la sua parola chiave per la base root, gliela abbiamo asseganta 
+tramite il .env
+
+
+
+Ovviamente dobbiamo aver lanciato il docker dalla dir che lo contine
+nel mio caso :
+
+cd /home/user/vsCodeProj/ia1/sw_development
+
+la prima volta:
+docker compose up --build -d
+
+poi:
+docker compose up -d
+
+per bloccare 
+docker compose down
+
+(aggiungi sudo se non va)
