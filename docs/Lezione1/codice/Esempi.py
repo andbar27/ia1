@@ -15,12 +15,26 @@ import os
 # Get the directory where the script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
 # Construct the path to the data file
-data_path = os.path.join(script_dir, '../dati/SomeMusicAlbums.csv')
-df = pd.read_csv(data_path)
+# data_path = os.path.join(script_dir, '../dati/SomeMusicAlbums.csv')
+# df = pd.read_csv(data_path)
 
-print("TEST: ho eseguito cose")
+# print("ho letto il csv")
+# print("df: \n", df.describe())
 # # # Leggi data da un file CSV in un dataframe
 # # df = pd.read_csv("../dati/SomeMusicAlbums.csv")
+titanic = pd.read_csv("../dati/titanic.csv")
+print("\n\nage.describe(): \n", titanic.Age.describe().head(2).tail(1))
+print("\n\nsettimo dalla fine: \n", titanic.tail(7).head(1).Name)
+
+print("\n\nage mean(): \n", titanic.Age.describe().iloc[[2]])
+print("\n\nsettimo dalla fine: \n", titanic.iloc[[-7]].Name)
+
+print("\n\nage mean(): \n", titanic.Age.describe().iloc[2])
+print("\n\nsettimo dalla fine: \n", titanic.iloc[-7].Name)
+
+titanic.set_index('Name', inplace=True)
+print("\n\nkeys: \n", titanic.index)
+print("\n\nCerca per nome\n", titanic.loc[['Dooley, Mr. Patrick']])
 
 # # Scrvi la struttura del dataframe
 # print(df.dtypes)
