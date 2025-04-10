@@ -36,6 +36,13 @@ titanic.set_index('Name', inplace=True)
 print("\n\nkeys: \n", titanic.index)
 print("\n\nCerca per nome\n", titanic.loc[['Dooley, Mr. Patrick']])
 
+
+condition = titanic["Age"] > 40
+print(condition)
+print(type(condition))
+print(titanic[condition])
+print(type(titanic[condition]))
+condition2 = titanic["Name"].cont
 # # Scrvi la struttura del dataframe
 # print(df.dtypes)
 
